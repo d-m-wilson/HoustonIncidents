@@ -42,6 +42,11 @@ namespace HFDIncidents.Web.Controllers
             return View();
         }
 
+        public ActionResult Fire()
+        {
+            return View();
+        }
+
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";

@@ -34,6 +34,7 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Active Incidents", "Index", "Home")</li>
+                    <li>@Html.ActionLink("For Firefighters", "Fire", "Home")</li>
                     <li>@Html.ActionLink("Archive Search", "Search", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                 </ul>
@@ -44,7 +45,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year <a href="https://www.linkedin.com/in/davidmauricewilson">David M. Wilson</a></p>
+            <p>&copy; @DateTime.Now.Year <a href="https://www.linkedin.com/in/davidmauricewilson">David M. Wilson</a> and contributors.</p>
         </footer>
     </div>
 
