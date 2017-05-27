@@ -1,0 +1,79 @@
+﻿body {
+    padding-top: 0;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-top: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+#map-instructions {
+    padding-bottom: 10px;
+}
+
+#pre-map-loading {
+    height: 25px;
+    position: relative;
+    top: 50%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+span.iw-text-label {
+    font-weight: bold;
+}
+
+#resultsGrid {
+    padding-top: 20px;
+}
+
+#map-data-loading {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-weight: bold;
+    font-size: 15px;
+    color: White;
+    background-color: #444;
+    padding: 10px;
+    z-index: 100;
+}
+
+#incident-details-page-title {
+    font-size: 18px;
+    font-weight: bold;
+    padding-top: 0;
+    padding-bottom: 10px;
+}
+
+#dl-incident-details {
+    padding-top: 20px;
+}
+
+#dl-incident-details dd {
+    padding-bottom: 10px;
+}
+
+hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

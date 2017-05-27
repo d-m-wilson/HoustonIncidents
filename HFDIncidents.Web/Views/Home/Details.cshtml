@@ -1,0 +1,156 @@
+﻿@using HFDIncidents.Domain.Models
+@using Jmelosegui.Mvc.GoogleMap
+@model HFDIncidents.Domain.Models.ArchivedIncident
+
+@{
+    ViewBag.Title = "Incident Details";
+}
+
+<div class="row">
+    <div id="incident-details-page-title" class="col-md-6 col-xs-10 col-xs-offset-1">
+        Incident Details
+    </div>
+</div>
+
+<div class="row">
+    @if (Model.Latitude.HasValue && Model.Longitude.HasValue)
+    {
+    <div class="col-md-6 col-xs-10 col-xs-offset-1">
+        @{
+            Html.GoogleMap()
+                .ApiKey(AppSettings.GoogleMapsKey)
+                .Name("incident-details-map")
+                .Width(0)
+                .Height(400)
+                .Center(c => c
+                    .Latitude(Model.Latitude.Value)
+                    .Longitude(Model.Longitude.Value))
+                .Zoom(13)
+                .Markers(m => m.Add()
+                    .Title(Model.IncidentType.Name)
+                    .Latitude(Model.Latitude.Value)
+                    .Longitude(Model.Longitude.Value)
+                )
+                .ApiKey(AppSettings.GoogleMapsKey)
+                .Render();
+        }
+    </div>
+    }
+    <div class="col-sm-6 col-xs-10 col-xs-offset-1">
+        <dl id="dl-incident-details" class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.IncidentType.Name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.IncidentType.Name)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.RetrievedDT)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.RetrievedDT)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Address)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Address)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.CrossStreet)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.CrossStreet)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.KeyMap)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.KeyMap)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Latitude)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Latitude)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Longitude)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Longitude)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.CallTimeOpened)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.CallTimeOpened)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.AlarmLevel)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.AlarmLevel)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.NumberOfUnits)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.NumberOfUnits)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Units)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Units)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.LastSeenDT)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.LastSeenDT)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.ArchivedDT)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ArchivedDT)
+            </dd>
+
+        </dl>
+    </div>
+</div>
+<p>
+    <a href="#" onclick="window.history.go(-1); return false;">Back to List</a>
+</p>
+
+@section scripts
+{
+    @(Html.GoogleMap().ScriptRegistrar())
+
+}
