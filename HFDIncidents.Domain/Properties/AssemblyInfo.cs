@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("HFDIncidents.Domain")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("https://github.com/d-m-wilson/HoustonIncidents")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("HFDIncidents.Domain")]
-[assembly: AssemblyCopyright("Copyright © 2016 David M. Wilson")]
+[assembly: AssemblyCopyright("Copyright © 2017 David M. Wilson and contributors.")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
