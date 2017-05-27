@@ -5,6 +5,7 @@
 *.suo
 *.user
 *.sln.docstates
+.vs/
 
 # Build results
 [Dd]ebug/
@@ -159,6 +160,7 @@ ClientBin/
 *.pfx
 *.publishsettings
 node_modules/
+*.jfm
 
 # RIA/Silverlight projects
 Generated_Code/
